@@ -138,7 +138,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'josnas'));
 console.log(yearsUntilRetirement(1950, 'moike'));
-*/
+
 
 function calcAge(birthYear, firstName) {
     const age = 2037 - birthYear;
@@ -147,3 +147,23 @@ function calcAge(birthYear, firstName) {
 }
 
 const age = calcAge(1991, 'Jonas');
+*/
+
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+const avgDolphins = calcAverage(85, 54, 41);
+const avgKoalas = calcAverage(23, 34, 27);
+console.log(avgDolphins, avgKoalas);
+
+function checkWinner(avgDolphins, avgKoalas) {
+    if (avgDolphins >= 2 * avgKoalas) {
+        console.log(`dolphins  wins ${avgDolphins} vs ${avgKoalas}`)
+    } else if (avgKoalas >= 2 * avgDolphins) {
+        console.log(`koalas wind ${avgKoalas} vs ${avgDolphins}`);
+    } else {
+        console.log('no team wins');
+    }
+
+}
+
+checkWinner(avgDolphins, avgKoalas);
+
