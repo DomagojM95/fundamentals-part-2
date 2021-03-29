@@ -147,7 +147,7 @@ function calcAge(birthYear, firstName) {
 }
 
 const age = calcAge(1991, 'Jonas');
-*/
+
 
 const calcAverage = (a, b, c) => (a + b + c) / 3;
 const avgDolphins = calcAverage(85, 54, 41);
@@ -167,3 +167,128 @@ function checkWinner(avgDolphins, avgKoalas) {
 
 checkWinner(avgDolphins, avgKoalas);
 
+
+
+const friend1 = 'michael';
+const friend2 = 'steven';
+const friend3 = 'peter';
+
+const friends = ['michael', 'steven', 'peter'];
+console.log(friends);
+
+const y = new Array(1991, 1984, 2008, 2020);
+
+console.log(friends[0]);
+console.log(friends[2]);
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = 'jay';
+console.log(friends);
+
+const firstName = 'jonas'
+const jonas = [firstName, 'schmedman', 2037 - 1991, 'teacher', friends];
+console.log(jonas);
+console.log(jonas.length)
+
+//excersise
+
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+const years = [1990, 1967, 2010, 2018];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+
+console.log(ages);
+
+const precentageOfWorld = population => (population / 7900) * 100;
+
+const population = [10, 1441, 332, 83];
+
+if (population.length === 4) {
+    console.log('array has 4 values');
+} else {
+    'doesent have 4 valuse'
+};
+const precentages = [
+    precentageOfWorld(population[0]),
+    precentageOfWorld(population[1]),
+    precentageOfWorld(population[2]),
+    precentageOfWorld(population[3]),
+
+];
+console.log(precentages);
+
+
+const friends = ['michael', 'steven', 'peter'];
+// ad elements
+const newLength = friends.push('jay');
+console.log(friends);
+console.log(newLength);
+
+friends.unshift('jihn');
+console.log(friends);
+
+//remove elements
+friends.pop(); // remove lst elemen of array
+const popped = friends.pop();
+console.log(friends);
+console.log(popped);
+
+friends.shift();// remove first
+console.log(friends);
+
+console.log(friends.indexOf('steven'));
+console.log(friends.indexOf('bob'));
+
+friends.push(23);
+console.log(friends.includes('steven'));
+console.log(friends.includes(23));
+
+if (friends.includes('steven')) {
+    console.log('youhave friend called steven');
+
+}
+
+
+
+// probao sam ne valja
+const calcTip = function (bill) {
+    const tip1 = bill * 0.15;
+    const tip2 = bill * 0.2;
+    if (bill >= 50 || bill <= 300) {
+        console.log(`tip is ${tip1} kn`);
+    } else {
+        `tip is ${tip2} kn`
+    }
+
+}
+
+
+const bills = [125, 555, 44]
+const tips = [
+    calcTip(bills[0]),
+    calcTip(bills[1]),
+    calcTip(bills[2]),
+]
+console.log(tips);
+*/
+//riješenje
+
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 :
+        bill * 0.2;
+}
+
+// const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill *0.2;
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(bills, tips);
