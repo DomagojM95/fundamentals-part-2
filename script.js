@@ -278,7 +278,7 @@ const tips = [
     calcTip(bills[2]),
 ]
 console.log(tips);
-*/
+
 //riješenje
 
 
@@ -292,3 +292,74 @@ const calcTip = function (bill) {
 const bills = [125, 555, 44];
 const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 console.log(bills, tips);
+
+
+const jonasArray = [
+    'jonas',
+    'schmedman',
+    2037 - 1991,
+    'teacher',
+    ['michael', 'peter', 'steven']
+];
+
+const jonas = {
+    firstName: 'jonas',
+    lastName: 'schmedman',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['michael', 'peter', 'steven']
+};
+
+
+/// ZADATAK
+const neighbours = ['bih', 'slovenija', 'srbija'];
+const nivaDužina = neighbours.push('utopia');
+console.log(neighbours);
+neighbours.unshift('hrvatska');
+console.log(neighbours);
+const izbacivanje = neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes('germany')) {
+    console.log('probably not central europe country');
+}
+
+neighbours[neighbours.indexOf('slovenija')] = 'madarska';
+console.log(neighbours);
+
+*/
+
+const jonas = {
+    firstName: 'jonas',
+    lastName: 'schmedman',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['michael', 'peter', 'steven']
+};
+
+console.log(jonas);
+
+console.log(jonas.lastName);
+console.log(jonas['lastName']);
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+const interestedIn = prompt('what do you want to know about jonas? choose betwene firstName, lastName, age, job, and friends');
+console.log(jonas[interestedIn]);
+
+if (jonas[interestedIn]) {
+    console.log(jonas[interestedIn]);
+} else {
+    console.log('wrong request! choose betwene firstName, lastName, age, job, and friends ');
+}
+
+jonas.loacation = 'portugal';
+jonas['twitter'] = '@jonasschmedtman';
+console.log(jonas);
+
+//chalenge
+// 'jonas has 3 friends and his best friend is called michael'
+
+console.log(`${jonas.firstName} has ${jonas.friends.length}   friends, and his best friend is called ${jonas.friends[0]}`);
