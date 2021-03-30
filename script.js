@@ -327,7 +327,7 @@ if (!neighbours.includes('germany')) {
 neighbours[neighbours.indexOf('slovenija')] = 'madarska';
 console.log(neighbours);
 
-*/
+
 
 const jonas = {
     firstName: 'jonas',
@@ -363,3 +363,18 @@ console.log(jonas);
 // 'jonas has 3 friends and his best friend is called michael'
 
 console.log(`${jonas.firstName} has ${jonas.friends.length}   friends, and his best friend is called ${jonas.friends[0]}`);
+
+
+
+const myCountry = {
+    countryName: 'Finland',
+    capitalName: 'Helsinki',
+    language: 'finish',
+    population: 6,
+    neighbor: 3,
+}
+myCountry.population = 8;
+myCountry['population'] = 6;
+console.log(`${myCountry.countryName} has ${myCountry.population} million ${myCountry.language}-speaking people ${myCountry.neighbor} neigbourng countries and capital called ${myCountry.capitalName}. `)
+
+*/
