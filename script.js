@@ -377,4 +377,75 @@ myCountry.population = 8;
 myCountry['population'] = 6;
 console.log(`${myCountry.countryName} has ${myCountry.population} million ${myCountry.language}-speaking people ${myCountry.neighbor} neigbourng countries and capital called ${myCountry.capitalName}. `)
 
+
+
+////////////////////////////////// Object Metods/////////////////
+
+const jonas = {
+    firstName: 'jonas',
+    lastName: 'schmedman',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['michael', 'peter', 'steven'],
+    hasDriversLicence: false,
+
+    //calcAge: function (bir thYear) {
+    //  return 2037 - birthYear;
+    //}
+
+
+    //calcAge: function () {
+    //console.log(this); //// za uzemanje podataka iz objekta bez ponavljanja (this)
+    //return 2037 - this.birthYear;
+    //}
+
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}- yearold ${this.job}, and he has ${this.hasDriversLicence ? 'a' : 'no'} drivers licences.`
+    }
+};
+
+console.log(jonas.calcAge()); //////  ispis sa dot
+
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+
+//console.log(jonas['calcAge'](1991)); ////// ispis sa  bracket notation
+
+
+
+////////  chalenge   /////////
+// 'Jonas is a 46- yearold teacher, and he has a drivers licence'
+
+console.log(jonas.getSummary());
+
+
+///////////////// zadatak /////////////////
+
+const myCountry = {
+    countryName: 'Finland',
+    capitalName: 'Helsinki',
+    language: 'finish',
+    population: 6,
+    neighbor: ['norway', 'sweden', 'russia'],
+
+    describe: function () {
+        console.log(
+            `${this.countryName} has ${this.population} million ${this.language}-speaking people, ${this.neighbor.length} neghbourning countries and a capital called ${this.capitalName}.`
+        );
+    },
+
+    checkIsland: function () {
+        this.isIsland = this.neighbor.lenght === 0 ? true : false;
+    }
+}
+myCountry.describe()
+myCountry.checkIsland()
+
 */
