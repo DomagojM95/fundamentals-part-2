@@ -449,3 +449,41 @@ myCountry.describe()
 myCountry.checkIsland()
 
 */
+
+//////////////////////////////////coding challenge//////////////////////
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    hight: 1.69,
+
+    calcBMI: function () {
+        this.bmi = this.mass / (this.hight * this.hight)
+        return this.bmi;
+
+    }
+}
+
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    hight: 1.95,
+
+    calcBMI: function () {
+        this.bmi = this.mass / (this.hight * this.hight)
+        return this.bmi;
+
+    }
+}
+mark.calcBMI();
+john.calcBMI();
+
+console.log(mark.bmi);
+console.log(john.bmi);
+
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName} BMI (${mark.bmi}) is higher than ${john.fullName} BMI (${john.bmi}).`);
+} else {
+    console.log(`${john.fullName} BMI (${john.bmi}) is higher than ${mark.fullName} BMI (${mark.bmi}).`)
+};
