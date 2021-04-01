@@ -448,7 +448,7 @@ const myCountry = {
 myCountry.describe()
 myCountry.checkIsland()
 
-*/
+
 
 //////////////////////////////////coding challenge//////////////////////
 
@@ -487,3 +487,36 @@ if (mark.bmi > john.bmi) {
 } else {
     console.log(`${john.fullName} BMI (${john.bmi}) is higher than ${mark.fullName} BMI (${mark.bmi}).`)
 };
+
+
+////////////////////////////FOR LOOP////////////////////////////
+
+/// controle struction
+
+
+
+//console.log('lifting weights repetition 1');
+//console.log('lifting weights repetition 2');
+//console.log('lifting weights repetition 3');
+//console.log('lifting weights repetition 4');
+//console.log('lifting weights repetition 5');
+//console.log('lifting weights repetition 6');
+//console.log('lifting weights repetition 7');
+//console.log('lifting weights repetition 8');
+//console.log('lifting weights repetition 9');
+//console.log('lifting weights repetition 10');
+
+
+// for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 30; rep++) {
+    console.log(`lifting weights repetition ${rep}`);
+};
+
+
+///////////////////zadatak////////////////////////////////////
+for (let vot = 1; vot <= 50; vot++) {
+    console.log(`Voter number ${vot} is curently voting.`);
+};
+
+
+*/
