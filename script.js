@@ -572,4 +572,69 @@ for (let i = 0; i < jonas.length; i++) {
 
     console.log(jonas[i], typeof jonas[i]);
 }
+
+
+////////////////////Loopong Bakwards amd Loop In Loop /////////
+
+const jonas = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+];
+
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+    console.log(jonas[i]);
+}
+
+
+for (let excersise = 1; excersise < 4; excersise++) {
+    console.log(`-----Starting excersise ${excersise}`);
+
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Exercise ${excersise}: Lifting weight repetition ${rep}`);
+    }
+}
+
+const listOfNeighbours = [
+    ['Canada', 'Mexico'],
+    ['Spain'],
+    ['Norway', 'Sweden', 'Russia']
+];
+
+////////////////ZADATAK////////////////
+
+for (let i = 0; i < listOfNeighbours.length; i++)
+    for (let y = 0; y < listOfNeighbours[i].length; y++)
+        console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+
+//////////////////The While Loop////////////////////////
+
+
+
+//for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`lifting weights repetition ${rep}`);
+//};
+
+
+let rep = 1;
+while (rep <= 10) {
+    // console.log(`WHILE: lifting weights repetition ${rep}`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+    console.log(`you rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('Loop is aobut to ned...');
+}
 */
+
+////////////////////FINAL CODING CHALLENGE//////////////////
+
